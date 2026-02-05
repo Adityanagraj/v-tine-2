@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0d0a0c;
+  --foreground: #f5e6ea;
+  --accent-rose: #c9a0a8;
+  --accent-gold: #d4af37;
+  --accent-wine: #722f37;
+  --card-bg: linear-gradient(145deg, #2d1f24 0%, #1a1215 100%);
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(212, 175, 55, 0.15);
+}
+
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Subtle ambient gradient background */
+.bg-valentine {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(114, 47, 55, 0.25), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(201, 160, 168, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 50%, rgba(201, 160, 168, 0.08), transparent),
+    #0d0a0c;
+}
+
+/* Elegant card back pattern */
+.card-pattern {
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 4px,
+      rgba(212, 175, 55, 0.04) 4px,
+      rgba(212, 175, 55, 0.04) 8px
+    ),
+    linear-gradient(145deg, #2d1f24 0%, #1a1215 100%);
+}
+
+/* Glass morphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
